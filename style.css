@@ -1,0 +1,96 @@
+body {
+    background-color: #121212;
+    color: #00FF00;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px #00FF00;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #00FF00;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #00FF00;
+}
+
+button {
+    background-color: #00FF00;
+    color: #121212;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00CC00;
+}
+
+#editor {
+    width: 100%;
+    background-color: #222;
+    color: #00FF00;
+    border: 1px solid #333;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+}
+
+#preview {
+    border: 1px solid #333;
+    margin-top: 20px;
+}
+
+textarea {
+    font-size: 16px;
+    background-color: #333;
+    color: #00FF00;
+    border: 1px solid #444;
+    padding: 10px;
+    width: 100%;
+}
+
+#editor:focus {
+    outline: none;
+    border: 1px solid #00FF00;
+}
+
+.tool {
+    margin-bottom: 20px;
+}
+
+.tool textarea {
+    height: 150px;
+}
+
+#url-input, #password-input, #malware-input, #js-code-input, #url-phishing-input {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #00FF00;
+    border: 1px solid #444;
+    margin-bottom: 10px;
+}
