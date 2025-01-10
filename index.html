@@ -27,7 +27,7 @@
             <h3>إنشاء كلمة مرور آمنة</h3>
             <label for="password-length">طول كلمة المرور: </label>
             <input type="number" id="password-length" value="12" min="8" max="32">
-            <button id="generate-password">إنشاء كلمة مرور</button>
+            <button class="styled-button" id="generate-password">إنشاء كلمة مرور</button>
             <p id="generated-password">كلمة المرور: </p>
         </div>
 
@@ -36,7 +36,7 @@
             <h3>فحص الأمان للموقع</h3>
             <label for="url-input">أدخل عنوان الموقع لفحص الأمان:</label>
             <input type="text" id="url-input" placeholder="https://example.com">
-            <button id="scan-button">فحص الأمان</button>
+            <button class="styled-button" id="scan-button">فحص الأمان</button>
             <p id="scan-result">نتيجة الفحص ستظهر هنا...</p>
         </div>
 
@@ -45,7 +45,7 @@
             <h3>فحص كلمة المرور المتسربة</h3>
             <label for="password-input">أدخل كلمة المرور لفحصها:</label>
             <input type="password" id="password-input" placeholder="أدخل كلمة المرور">
-            <button id="check-leak-button">فحص كلمة المرور</button>
+            <button class="styled-button" id="check-leak-button">فحص كلمة المرور</button>
             <p id="leak-check-result">نتيجة الفحص ستظهر هنا...</p>
         </div>
 
@@ -53,7 +53,7 @@
         <div class="tool">
             <h3>تحليل النصوص للكشف عن البرمجيات الخبيثة</h3>
             <textarea id="malware-input" placeholder="أدخل النص لفحصه من البرمجيات الخبيثة..."></textarea>
-            <button id="scan-malware-button">فحص النص</button>
+            <button class="styled-button" id="scan-malware-button">فحص النص</button>
             <p id="malware-scan-result">نتيجة الفحص ستظهر هنا...</p>
         </div>
 
@@ -61,7 +61,7 @@
         <div class="tool">
             <h3>تحليل أكواد JavaScript</h3>
             <textarea id="js-code-input" placeholder="أدخل كود JavaScript هنا..."></textarea>
-            <button id="analyze-js-button">تحليل الكود</button>
+            <button class="styled-button" id="analyze-js-button">تحليل الكود</button>
             <p id="js-analysis-result">نتيجة التحليل ستظهر هنا...</p>
         </div>
 
@@ -70,7 +70,7 @@
             <h3>فحص الروابط المشبوهة (التصيد)</h3>
             <label for="url-phishing-input">أدخل الرابط لفحصه:</label>
             <input type="text" id="url-phishing-input" placeholder="https://example.com">
-            <button id="check-phishing-button">فحص الرابط</button>
+            <button class="styled-button" id="check-phishing-button">فحص الرابط</button>
             <p id="phishing-check-result">نتيجة الفحص ستظهر هنا...</p>
         </div>
     </section>
@@ -94,7 +94,7 @@
         <h2>بيئة تطوير البرمجة</h2>
         <textarea id="editor" rows="10" cols="50">اكتب كود HTML هنا...</textarea>
         <br>
-        <button id="run-code">تشغيل الكود</button>
+        <button class="styled-button" id="run-code">تشغيل الكود</button>
         <h3>المعاينة:</h3>
         <iframe id="preview" style="width: 100%; height: 400px;"></iframe>
     </section>
