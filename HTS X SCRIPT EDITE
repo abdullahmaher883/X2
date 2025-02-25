@@ -1,0 +1,277 @@
+-- إعداد الألوان
+local darkRed = Color3.fromRGB(100, 0, 0) -- أحمر داكن
+local black = Color3.fromRGB(0, 0, 0) -- أسود
+local white = Color3.new(1, 1, 1) -- أبيض
+
+-- إعداد رسالة التشغيل
+local creatorMessage = Instance.new("Message", game:GetService("CoreGui"))
+creatorMessage.Text = "تم تعديله بواسطة Abdullah Maher"
+creatorMessage.TextColor3 = white
+creatorMessage.BackgroundColor3 = darkRed
+
+-- إخفاء الرسالة بعد ثانيتين
+delay(2, function()
+    creatorMessage:Destroy()
+end)
+
+-- إعداد الأنيميشن
+local function animateFrame(frame)
+    local tweenService = game:GetService("TweenService")
+    local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true)
+    local tween = tweenService:Create(frame, tweenInfo, {Position = UDim2.new(0.5, -180, 0.5, -100)})
+    tween:Play()
+end
+
+-- إعداد الواجهة
+if IY_LOADED and not _G.IY_DEBUG == true then
+    return
+end
+
+pcall(function() getgenv().IY_LOADED = true end)
+
+local cloneref = cloneref or function(o) return o end
+COREGUI = cloneref(game:GetService("CoreGui"))
+Players = cloneref(game:GetService("Players"))
+
+if not game:IsLoaded() then
+    local notLoaded = Instance.new("Message")
+    notLoaded.Parent = COREGUI
+    notLoaded.Text = "Infinite Yield is waiting for the game to load"
+    game.Loaded:Wait()
+    notLoaded:Destroy()
+end
+
+currentVersion = "6.3"
+
+Holder = Instance.new("Frame")
+Title = Instance.new("TextLabel")
+Dark = Instance.new("Frame")
+Cmdbar = Instance.new("TextBox")
+CMDsF = Instance.new("ScrollingFrame")
+cmdListLayout = Instance.new("UIListLayout")
+SettingsButton = Instance.new("ImageButton")
+ColorsButton = Instance.new("ImageButton")
+Settings = Instance.new("Frame")
+Prefix = Instance.new("TextLabel")
+PrefixBox = Instance.new("TextBox")
+Keybinds = Instance.new("TextLabel")
+StayOpen = Instance.new("TextLabel")
+Button = Instance.new("Frame")
+On = Instance.new("TextButton")
+Positions = Instance.new("TextLabel")
+EventBind = Instance.new("TextLabel")
+Plugins = Instance.new("TextLabel")
+Example = Instance.new("TextButton")
+Notification = Instance.new("Frame")
+Title_2 = Instance.new("TextLabel")
+Text_2 = Instance.new("TextLabel")
+CloseButton = Instance.new("TextButton")
+CloseImage = Instance.new("ImageLabel")
+PinButton = Instance.new("TextButton")
+PinImage = Instance.new("ImageLabel")
+Tooltip = Instance.new("Frame")
+Title_3 = Instance.new("TextLabel")
+Description = Instance.new("TextLabel")
+IntroBackground = Instance.new("Frame")
+Logo = Instance.new("ImageLabel")
+Credits = Instance.new("TextBox")
+KeybindsFrame = Instance.new("Frame")
+Close = Instance.new("TextButton")
+Add = Instance.new("TextButton")
+Delete = Instance.new("TextButton")
+Holder_2 = Instance.new("ScrollingFrame")
+Example_2 = Instance.new("Frame")
+Text_3 = Instance.new("TextLabel")
+Delete_2 = Instance.new("TextButton")
+KeybindEditor = Instance.new("Frame")
+background_2 = Instance.new("Frame")
+Dark_3 = Instance.new("Frame")
+Directions = Instance.new("TextLabel")
+BindTo = Instance.new("TextButton")
+TriggerLabel = Instance.new("TextLabel")
+BindTriggerSelect = Instance.new("TextButton")
+Add_2 = Instance.new("TextButton")
+Toggles = Instance.new("ScrollingFrame")
+ClickTP  = Instance.new("TextLabel")
+Select = Instance.new("TextButton")
+ClickDelete = Instance.new("TextLabel")
+Select_2 = Instance.new("TextButton")
+Cmdbar_2 = Instance.new("TextBox")
+Cmdbar_3 = Instance.new("TextBox")
+CreateToggle = Instance.new("TextLabel")
+Button_2 = Instance.new("Frame")
+On_2 = Instance.new("TextButton")
+shadow_2 = Instance.new("Frame")
+PopupText_2 = Instance.new("TextLabel")
+Exit_2 = Instance.new("TextButton")
+ExitImage_2 = Instance.new("ImageLabel")
+PositionsFrame = Instance.new("Frame")
+Close_3 = Instance.new("TextButton")
+Delete_5 = Instance.new("TextButton")
+Part = Instance.new("TextButton")
+Holder_4 = Instance.new("ScrollingFrame")
+Example_4 = Instance.new("Frame")
+Text_5 = Instance.new("TextLabel")
+Delete_6 = Instance.new("TextButton")
+TP = Instance.new("TextButton")
+AliasesFrame = Instance.new("Frame")
+Close_2 = Instance.new("TextButton")
+Delete_3 = Instance.new("TextButton")
+Holder_3 = Instance.new("ScrollingFrame")
+Example_3 = Instance.new("Frame")
+Text_4 = Instance.new("TextLabel")
+Delete_4 = Instance.new("TextButton")
+Aliases = Instance.new("TextLabel")
+PluginsFrame = Instance.new("Frame")
+Close_4 = Instance.new("TextButton")
+Add_3 = Instance.new("TextButton")
+Holder_5 = Instance.new("ScrollingFrame")
+Example_5 = Instance.new("Frame")
+Text_6 = Instance.new("TextLabel")
+Delete_7 = Instance.new("TextButton")
+PluginEditor = Instance.new("Frame")
+background_3 = Instance.new("Frame")
+Dark_2 = Instance.new("Frame")
+Img = Instance.new("ImageButton")
+AddPlugin = Instance.new("TextButton")
+FileName = Instance.new("TextBox")
+About = Instance.new("TextLabel")
+Directions_2 = Instance.new("TextLabel")
+shadow_3 = Instance.new("Frame")
+PopupText_3 = Instance.new("TextLabel")
+Exit_3 = Instance.new("TextButton")
+ExitImage_3 = Instance.new("ImageLabel")
+AliasHint = Instance.new("TextLabel")
+PluginsHint = Instance.new("TextLabel")
+PositionsHint = Instance.new("TextLabel")
+ToPartFrame = Instance.new("Frame")
+background_4 = Instance.new("Frame")
+ChoosePart = Instance.new("TextButton")
+CopyPath = Instance.new("TextButton")
+Directions_3 = Instance.new("TextLabel")
+Path = Instance.new("TextLabel")
+shadow_4 = Instance.new("Frame")
+PopupText_5 = Instance.new("TextLabel")
+Exit_4 = Instance.new("TextButton")
+ExitImage_5 = Instance.new("ImageLabel")
+logs = Instance.new("Frame")
+shadow = Instance.new("Frame")
+Hide = Instance.new("TextButton")
+ImageLabel = Instance.new("ImageLabel")
+PopupText = Instance.new("TextLabel")
+Exit = Instance.new("TextButton")
+ImageLabel_2 = Instance.new("ImageLabel")
+background = Instance.new("Frame")
+chat = Instance.new("Frame")
+Clear = Instance.new("TextButton")
+SaveChatlogs = Instance.new("TextButton")
+Toggle = Instance.new("TextButton")
+scroll_2 = Instance.new("ScrollingFrame")
+join = Instance.new("Frame")
+Toggle_2 = Instance.new("TextButton")
+Clear_2 = Instance.new("TextButton")
+scroll_3 = Instance.new("ScrollingFrame")
+listlayout = Instance.new("UIListLayout",scroll_3)
+selectChat = Instance.new("TextButton")
+selectJoin = Instance.new("TextButton")
+
+-- تغيير الألوان
+Holder.BackgroundColor3 = black
+Title.BackgroundColor3 = darkRed
+Title.TextColor3 = white
+Dark.BackgroundColor3 = darkRed
+Cmdbar.TextColor3 = white
+Cmdbar.PlaceholderColor3 = white
+CMDsF.ScrollBarImageColor3 = darkRed
+SettingsButton.ImageColor3 = white
+Settings.BackgroundColor3 = darkRed
+Prefix.TextColor3 = white
+PrefixBox.TextColor3 = white
+Keybinds.TextColor3 = white
+StayOpen.TextColor3 = white
+Button.BackgroundColor3 = darkRed
+On.TextColor3 = white
+Positions.TextColor3 = white
+EventBind.TextColor3 = white
+Plugins.TextColor3 = white
+Example.TextColor3 = white
+Notification.BackgroundColor3 = darkRed
+Title_2.TextColor3 = white
+Text_2.TextColor3 = white
+CloseImage.ImageColor3 = white
+PinImage.ImageColor3 = white
+Tooltip.BackgroundColor3 = darkRed
+Title_3.TextColor3 = white
+Description.TextColor3 = white
+IntroBackground.BackgroundColor3 = darkRed
+Logo.ImageColor3 = white
+Credits.TextColor3 = white
+KeybindsFrame.BackgroundColor3 = darkRed
+Close.TextColor3 = white
+Add.TextColor3 = white
+Delete.TextColor3 = white
+Example_2.BackgroundColor3 = darkRed
+Text_3.TextColor3 = white
+Delete_2.TextColor3 = white
+KeybindEditor.BackgroundColor3 = darkRed
+background_2.BackgroundColor3 = darkRed
+Dark_3.BackgroundColor3 = darkRed
+Directions.TextColor3 = white
+BindTo.TextColor3 = white
+TriggerLabel.TextColor3 = white
+BindTriggerSelect.TextColor3 = white
+Add_2.TextColor3 = white
+ClickTP.TextColor3 = white
+Select.TextColor3 = white
+ClickDelete.TextColor3 = white
+Select_2.TextColor3 = white
+Cmdbar_2.TextColor3 = white
+Cmdbar_3.TextColor3 = white
+CreateToggle.TextColor3 = white
+Button_2.BackgroundColor3 = darkRed
+On_2.TextColor3 = white
+shadow_2.BackgroundColor3 = darkRed
+PopupText_2.TextColor3 = white
+ExitImage_2.ImageColor3 = white
+PositionsFrame.BackgroundColor3 = darkRed
+Close_3.TextColor3 = white
+Delete_5.TextColor3 = white
+Part.TextColor3 = white
+Example_4.BackgroundColor3 = darkRed
+Text_5.TextColor3 = white
+Delete_6.TextColor3 = white
+TP.TextColor3 = white
+AliasesFrame.BackgroundColor3 = darkRed
+Close_2.TextColor3 = white
+Delete_3.TextColor3 = white
+Example_3.BackgroundColor3 = darkRed
+Text_4.TextColor3 = white
+Delete_4.TextColor3 = white
+PluginsFrame.BackgroundColor3 = darkRed
+Close_4.TextColor3 = white
+Add_3.TextColor3 = white
+Example_5.BackgroundColor3 = darkRed
+Text_6.TextColor3 = white
+Delete_7.TextColor3 = white
+PluginEditor.BackgroundColor3 = darkRed
+background_3.BackgroundColor3 = darkRed
+Dark_2.BackgroundColor3 = darkRed
+AddPlugin.TextColor3 = white
+FileName.TextColor3 = white
+About.TextColor3 = white
+Directions_2.TextColor3 = white
+shadow_3.BackgroundColor3 = darkRed
+PopupText_3.TextColor3 = white
+ExitImage_3.ImageColor3 = white
+AliasHint.TextColor3 = white
+PluginsHint.TextColor3 = white
+PositionsHint.TextColor3 = white
+ToPartFrame.BackgroundColor3 = darkRed
+background_4.BackgroundColor3 = darkRed
+ChoosePart.TextColor3 = white
+CopyPath.TextColor3 = white
+Directions_3.TextColor3 = white
+Path.TextColor3 = white
+
+-- تطبيق الأنيميشن
+animateFrame(Holder)
